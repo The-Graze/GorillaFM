@@ -1,6 +1,6 @@
 # GorillaFM
 
-# <img width="1080" height="1080" alt="GorillaFM" src="https://github.com/user-attachments/assets/5865afb1-b427-4f51-bb03-eb8d62dae85d" />
+# <img width="256" height="256" alt="GorillaFM" src="https://github.com/user-attachments/assets/5865afb1-b427-4f51-bb03-eb8d62dae85d" />
 
 
 
