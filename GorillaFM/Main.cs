@@ -54,12 +54,18 @@ public class GorillaFm : MonoBehaviour
     private static GUISkin? _guiSkin;
 
     public static LastTrack? CurrentTrack;
+    
+    public static Action? SongChangedCallback;
 
     private string? _cachedTrackName = "";
     public Texture2D? trackTexture;
 
     private readonly CancellationTokenSource _cts = new();
-
+    
+    public void OnSongChanged(Action action)
+    { 
+        SongChangedCallback += action;
+    }
 
     private void Start()
     {
@@ -172,6 +178,8 @@ public class GorillaFm : MonoBehaviour
         {
             trackTexture = DownloadHandlerTexture.GetContent(request);
         }
+        var callback = SongChangedCallback;
+        callback();
     }
     
     
