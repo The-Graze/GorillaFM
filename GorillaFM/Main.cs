@@ -20,6 +20,7 @@ public class Main : BaseUnityPlugin
     public static Main? Instance;
 
     internal ConfigEntry<string>? APIKey, APISecret, Username, Password;
+    internal ConfigEntry<bool>? ShowExampleUI;
 
     public GorillaFm? gorillaFm;
 
@@ -35,7 +36,7 @@ public class Main : BaseUnityPlugin
         APISecret = Config.Bind("KEEP HIDDEN FROM OTHERS", "APISecret", PlaceHolder);
         Username = Config.Bind("KEEP HIDDEN FROM OTHERS", "Username", PlaceHolder);
         Password = Config.Bind("KEEP HIDDEN FROM OTHERS", "Password", PlaceHolder);
-
+        ShowExampleUI = Config.Bind("Settings",  "Show Example UI", false);
         GorillaTagger.OnPlayerSpawned(OnPlayerSpawn);
     }
 
@@ -88,7 +89,7 @@ public class GorillaFm : MonoBehaviour
     private const int FontSize = 32;
     private void OnGUI()
     {
-        if (CurrentTrack == null)
+        if (CurrentTrack == null || !Main.Instance!.ShowExampleUI!.Value)
             return;
 
         GUILayout.BeginVertical(_guiSkin?.box ?? GUI.skin.box);
