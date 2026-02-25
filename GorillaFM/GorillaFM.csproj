@@ -90,7 +90,7 @@
             <HintPath>$(GameAssemblyPath)\Fusion.Runtime.dll</HintPath>
         </Reference>
         <Reference Include="IF.Lastfm.Core">
-          <HintPath>..\..\..\..\..\..\..\home\graze\.local\share\Steam\steamapps\common\Gorilla Tag\BepInEx\plugins\GorillaFM\IF.Lastfm.Core.dll</HintPath>
+          <HintPath>$(PluginsPath)\GorillaFM\IF.Lastfm.Core.dll</HintPath>
         </Reference>
         <Reference Include="KID" Publicize="true">
             <HintPath>$(GameAssemblyPath)\KID.dll</HintPath>
