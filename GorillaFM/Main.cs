@@ -26,7 +26,7 @@ public class Main : BaseUnityPlugin
     public Main()
     {
         Instance = this;
-        HarmonyPatches.Patch();
+        //HarmonyPatches.Patch();
     }
 
     private void Start()
