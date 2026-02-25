@@ -4,7 +4,7 @@
 
 
 
-Last.FM And Gtag libray
+Last.FM Gtag libray
 
 will mostly be for other mods to show what ur listing to, for now has its on OnGUI / as an example
 
